@@ -281,7 +281,18 @@ function renderParsedResume(r) {
     if (r.github) updateField(infoCard, 'GitHub', `<a target="_blank" href="${esc(r.github)}">${esc(r.github)}</a>`, true);
     if (r.site) updateField(infoCard, 'Website', `<a target="_blank" href="${esc(r.site)}">${esc(r.site)}</a>`, true);
   }
-  //Redere Card
+
+  // AGE CALCULATOR (FIXED VALUE)
+  const birthYear = 1986;
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - birthYear;
+
+  const ageDisplay = document.getElementById('ageDisplay');
+  if (ageDisplay) {
+    ageDisplay.innerText = age;
+  }
+
+  //Render Card
   function renderCards(section, items, headerClass, renderBody) {
     if (!section || !items?.length) return;
 
