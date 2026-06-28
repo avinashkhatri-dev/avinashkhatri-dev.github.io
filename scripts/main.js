@@ -244,7 +244,7 @@ function renderParsedResume(r) {
 
   // SHORT CATEGORY (first 120 chars of summary)
   const categoryEl = document.querySelector('.category.text-white');
-  if (categoryEl && r.summary) categoryEl.textContent = r.summary.replace(/\n/g,' ').substring(0,120);
+  if (categoryEl && r.summary) categoryEl.textContent = r.summary.replace(/\n/g,' ').substring(0,119);
 
   // ABOUT: #about-content if present
   const aboutContentEl = document.getElementById('about-content');
